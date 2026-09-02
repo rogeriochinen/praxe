@@ -111,5 +111,8 @@ publicar.
 
 ## Licença
 
-Ainda não definida. Sem licença explícita, o código fica disponível apenas para
-leitura e avaliação; uso, cópia e redistribuição não estão autorizados.
+[PolyForm Noncommercial License 1.0.0](LICENSE.md). O código pode ser lido,
+estudado, executado, modificado e compartilhado para fins não comerciais. Uso
+comercial exige autorização por escrito do titular.
+
+Required Notice: Copyright (c) 2026 Rogerio Chinen
