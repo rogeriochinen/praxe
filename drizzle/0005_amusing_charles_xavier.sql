@@ -1,0 +1,1 @@
+ALTER TABLE `processes` ADD `owner_user_id` text REFERENCES users(id);

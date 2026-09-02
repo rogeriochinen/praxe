@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `suggestions_source_insight_uq` ON `suggestions` (`source_insight_id`);

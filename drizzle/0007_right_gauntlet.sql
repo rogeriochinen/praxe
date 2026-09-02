@@ -1,0 +1,1 @@
+ALTER TABLE `processes` ADD `source_interview_id` text;

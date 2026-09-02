@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;700&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
+
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility scrollbar-gutter-stable {
+  scrollbar-gutter: stable;
+}
+
+:root {
+  --px-osso: #F0EFEA;
+  --px-alto: #FAFAF7;
+  --px-grafite: #1C1C1A;
+  --px-medio: #57574F;
+  --px-linha: #D7D6CF;
+  --px-linha-forte: #B9B8B0;
+  --px-caneta: #1B3BD6;
+  --px-caneta-escuro: #1531AE;
+  --px-caneta-claro: #8FA6FF;
+  --px-caneta-fraco: #E7EAFB;
+  --px-vigente: #147A4E;
+  --px-vigente-fraco: #E3F2EA;
+  --px-teste: #9A5B00;
+  --px-teste-fraco: #F8EEDD;
+  --px-alerta: #A33A33;
+  --px-alerta-fraco: #F7EDEC;
+  --background: var(--px-osso);
+  --foreground: var(--px-grafite);
+  --card: var(--px-alto);
+  --card-foreground: var(--px-grafite);
+  --popover: var(--px-alto);
+  --popover-foreground: var(--px-grafite);
+  --primary: var(--px-caneta);
+  --primary-foreground: #ffffff;
+  --secondary: var(--px-alto);
+  --secondary-foreground: var(--px-grafite);
+  --muted: #E5E4DE;
+  --muted-foreground: var(--px-medio);
+  --accent: var(--px-caneta-fraco);
+  --accent-foreground: var(--px-caneta-escuro);
+  --destructive: var(--px-alerta);
+  --border: var(--px-linha);
+  --input: var(--px-linha-forte);
+  --ring: var(--px-caneta);
+  --chart-1: var(--px-caneta);
+  --chart-2: var(--px-vigente);
+  --chart-3: var(--px-grafite);
+  --chart-4: var(--px-teste);
+  --chart-5: var(--px-caneta-claro);
+  --radius: 0.125rem;
+  --sidebar: var(--px-grafite);
+  --sidebar-foreground: var(--px-alto);
+  --sidebar-primary: var(--px-caneta-claro);
+  --sidebar-primary-foreground: var(--px-grafite);
+  --sidebar-accent: #30302D;
+  --sidebar-accent-foreground: var(--px-alto);
+  --sidebar-border: #3F3F3A;
+  --sidebar-ring: var(--px-caneta-claro);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 2px;
+  --radius-2xl: 2px;
+  --radius-3xl: 2px;
+  --radius-4xl: 2px;
+  --font-sans: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Public Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.font-serif, .font-display { font-family: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif; }
+.font-serif { font-weight: 600; }
+
+[data-slot="badge"] {
+  border-radius: 2px;
+  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+[data-slot="button"] {
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+[data-slot="input"],
+[data-slot="textarea"],
+[data-slot="select-trigger"] {
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.login-shell {
+  background: var(--px-osso);
+}
+
+::selection { background: var(--px-caneta-fraco); color: var(--px-grafite); }
+:focus-visible { outline: 2px solid var(--px-caneta); outline-offset: 3px; }
